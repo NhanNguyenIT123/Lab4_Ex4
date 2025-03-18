@@ -1,0 +1,151 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background: #f4f4f4;
+    flex-direction: column;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: black;
+    font-weight: 600;
+}
+
+nav ul li:not(:last-child)::after {
+    content: " /"; 
+    margin-left: 5px;
+}
+
+.intro {
+    text-align: center;
+    padding: 20px;
+    border-bottom: 5px solid black;
+}
+
+.content {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 20px;
+}
+
+.content  div {
+    flex: 1;
+    min-width: 300px;
+    padding: 15px;
+    border-radius: 8px;
+}
+
+.projects{
+    margin: -30px;
+}
+
+.projects ul {
+    list-style: none;
+    padding: 0;
+}
+
+.projects h3, .work-experience h3{
+    text-align: center;
+}
+
+.projects ul li {
+    background: #eaeaea;
+    margin: 5px 0;
+    padding: 15px;
+    border-radius: 5px;
+    text-align: center;
+}
+
+
+.work-experience h3{
+    margin-top: -5px;
+}
+
+.work-experience-content {
+    background: #eaeaea;
+    border-radius: 8px;
+    width: 100%;
+    box-sizing: border-box;
+    margin-top: 10px; 
+}
+
+.education h3{
+    margin-top: -5px;
+}
+
+.education ul{
+    list-style-type: none;
+    padding: 0;
+}
+
+.education ul li::before{
+    content: "-";
+}
+
+.reviews {
+    width: 100%;  
+    padding: 20px;
+}
+
+.reviews h3 {
+    text-align: left; 
+    margin-bottom: 10px;
+}
+
+.reviews-content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; 
+    gap: 10px; 
+}
+
+footer {
+    text-align: center;
+    padding: 10px;
+}
+
+@media (max-width: 768px) {
+    .content {
+        flex-direction: column;
+    }
+    header {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+@media (min-width: 1000px) {
+    .content {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    header {
+        flex-direction: row;
+        align-items: center;
+    }
+    .review {
+        flex: 1; 
+        width: 100%;
+    }
+}
+
